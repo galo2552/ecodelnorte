@@ -1,0 +1,471 @@
+img {
+  border-radius: 2px;
+}
+
+.seccion-principal {
+  display: flex;
+  width: 100%;
+  padding: 20px 0; /* Padding arriba y abajo */
+}
+
+.container {
+  flex: 1; /* Ocupa la mitad del espacio disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 673px; /* Altura más proporcionada */
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  object-fit: cover;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.imgs-estiradas {
+  flex: 1; /* Ocupa la otra mitad del espacio disponible */
+  display: flex;
+  flex-direction: column; /* Coloca las imágenes una arriba de la otra */
+  gap: 5px; /* Espacio entre las imágenes */
+  padding: 10px;
+  justify-content: center; /* Centra verticalmente */
+}
+
+.imgs-estiradas img {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 335px; /* Altura calculada para que quepan dos imágenes (400px - 10px gap) / 2 */
+  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Layout principal de la sección secundaria */
+.seccion-secundaria {
+  display: flex;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+/* Columna 1 - más ancha */
+.col-1 {
+  flex: 3; /* Aumentado para que sea más ancha */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Columna 2 - imágenes verticales al lado derecho de col-1 */
+.col-2 {
+  flex: 1.2; /* Ajustado para que no sea tan estrecha */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Columna 3 - sidebar derecha */
+.col-3 {
+  flex: 1.5; /* Ligeramente más ancha */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilos para col-1 */
+.imagen-estirada-chica {
+  width: 85%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.desc-img-esti-chica {
+  font-size: 30px;
+  color: #333;
+  margin-top: 8px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.publicidad-rectangulo {
+  width: 85%;
+  height: 220px;
+  background-color: #6c5ce7;
+  object-fit: cover;
+}
+
+.container-img-chica-col-1 {
+  display: flex;
+  gap: 5px;
+}
+
+.container-img-chica-col-1 figure {
+  flex: 1;
+}
+
+.container-img-chica-col-1 .img-chica {
+  width: 70%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilos para col-2 - imágenes verticales más grandes */
+.col-2 figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.col-2 .img-chica {
+  width: 84%;
+  height: 200px; /* Aumentado significativamente */
+  object-fit: cover;
+}
+
+.col-2 figcaption {
+  font-size: 14px; /* Aumentado */
+  color: #333;
+  line-height: 1.3;
+  font-weight: 500; /* Más bold */
+}
+
+.col-2 p {
+  font-size: 12px; /* Aumentado */
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Estilos para col-3 */
+.col-3 img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.col-3 h3 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.col-3 ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.col-3 li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.col-3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.col-3 li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion-secundaria {
+      flex-direction: column;
+  }
+  
+  .container-img-chica-col-1 {
+      flex-direction: column;
+  }
+  
+  .col-2 .img-chica {
+      height: 100px;
+  }
+}
+
+.seccion-coopesol {
+  max-width: 1880px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-publicidad-estirada {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  background-color: #6c5ce7; /* Color de placeholder */
+}
+
+.videos-coopesol {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.video-1, .video-2, .video-3 {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-1:hover, .video-2:hover, .video-3:hover {
+  transform: translateY(-5px);
+}
+
+.videos-coopesol video {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.videos-coopesol h3 {
+  padding: 15px 15px 0 15px;
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.videos-coopesol p {
+  padding: 10px 15px 20px 15px;
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .videos-coopesol {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .videos-coopesol video {
+      height: 180px;
+  }
+  
+  .videos-coopesol h3 {
+      font-size: 15px;
+  }
+  
+  .videos-coopesol p {
+      font-size: 12px;
+  }
+}
+
+h4 {
+  margin: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  color: green;
+  background-color: #d8e2dc;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.seccion-info-general {
+  display: flex;
+  gap: 10px;
+  margin: 15px;
+}
+
+.img-vertical-larga {
+  width: 461px;
+  height: 600px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-vertical-larga:hover {
+  transform: translateY(-5px);
+}
+
+.seccion-form {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.seccion-form h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.seccion-form p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.form-control {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.form-control .input-group {
+  position: relative;
+  margin: 0;
+  width: 200px;
+}
+
+.form-control input[type="text"], 
+.form-control input[type="email"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px rgba(255, 255, 255, 0.7) solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-control input[type="text"]:focus,
+.form-control input[type="text"]:valid,
+.form-control input[type="email"]:focus,
+.form-control input[type="email"]:valid {
+  outline: 0;
+  border-bottom-color: #fff;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input[type="text"]:focus + label span,
+.form-control input[type="text"]:valid + label span,
+.form-control input[type="email"]:focus + label span,
+.form-control input[type="email"]:valid + label span {
+  color: #fff;
+  transform: translateY(-30px);
+}
+
+.form-control input[type="submit"] {
+  background: #6c5ce7;
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 20px;
+}
+
+.form-control input[type="submit"]:hover {
+  background: #5a4fcf;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.form-control input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.checkbox-group label {
+  position: static;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-control {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+  
+  .form-control .input-group {
+      width: 280px;
+  }
+  
+  .form-control input[type="submit"] {
+      margin: 10px 0;
+      width: 200px;
+  }
+  
+  .checkbox-group {
+      margin: 0;
+      justify-content: center;
+  }
+}
